@@ -2,12 +2,13 @@ use std::collections::HashMap;
 
 /// The `KvStore` stores string key/value pairs.
 ///
-/// Key/value pairs are sotre in `HashMap` in memory and not persisted to disk.
+/// Key/value pairs are store in `HashMap` in memory and not persisted to disk.
 ///
 /// Example:
 ///
 /// ```rust
-/// let mut sotre = KvStore::new();
+/// use kvs::KvStore;
+/// let mut store = KvStore::new();
 /// store.set("key".to_owned(), "value".to_owned());
 /// let val = store.get("key".to_owned());
 /// assert_eq!(val, Some("value".to_owned()));

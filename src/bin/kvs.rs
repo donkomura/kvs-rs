@@ -1,4 +1,5 @@
 use clap::{Parser, Subcommand};
+use std::process::exit;
 
 #[derive(Parser)]
 #[clap(
@@ -29,14 +30,17 @@ fn main() {
         #[allow(unused_variables)]
         KvsCommand::Set { key, value } => {
             eprintln!("unimplemented");
+            exit(1);
         }
         #[allow(unused_variables)]
         KvsCommand::Get { key } => {
             eprintln!("unimplemented");
+            exit(1);
         }
         #[allow(unused_variables)]
         KvsCommand::Rm { key } => {
             eprintln!("unimplemented");
+            exit(1);
         }
     }
 }
